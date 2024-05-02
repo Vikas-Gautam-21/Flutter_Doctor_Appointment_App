@@ -1,6 +1,8 @@
 import 'package:doctor_laravel/utils/config.dart';
 import 'package:flutter/material.dart';
 
+import 'button.dart';
+
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
 
@@ -61,6 +63,12 @@ class _LoginFormState extends State<LoginForm> {
                           ))),
           ),
           Config.spaceSmall,
+          Button(
+            width: double.infinity,
+            disable: false,
+            onPressed: () {},
+            title: 'Sign In',
+          )
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:doctor_laravel/components/login_form.dart';
+import 'package:doctor_laravel/components/social_button.dart';
 import 'package:doctor_laravel/utils/config.dart';
 import 'package:doctor_laravel/utils/text.dart';
 import 'package:flutter/material.dart';
@@ -45,15 +46,57 @@ class _AuthPageState extends State<AuthPage> {
               Config.spaceSmall,
               Center(
                 child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      AppText.entext['forgot-password']!,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    )),
+                  onPressed: () {},
+                  child: Text(
+                    AppText.entext['forgot-password']!,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              const Spacer(),
+              Center(
+                child: Text(
+                  AppText.entext['social-login']!,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.grey.shade500,
+                  ),
+                ),
+              ),
+              Config.spaceSmall,
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SocialButton(social: 'google'),
+                  SocialButton(social: 'facebook')
+                ],
+              ),
+              Config.spaceSmall,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    AppText.entext['signUp_text']!,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  const Text(
+                    ' Sign Up',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
               )
             ],
           ),
