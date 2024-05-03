@@ -1,7 +1,11 @@
 import 'package:doctor_laravel/main_layout.dart';
 import 'package:doctor_laravel/screens/auth_page.dart';
+import 'package:doctor_laravel/screens/booking_page.dart';
+import 'package:doctor_laravel/screens/doctor_details.dart';
 import 'package:doctor_laravel/utils/config.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/success_booked.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +47,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const AuthPage(),
-        'main': (context) => const MainLayout()
+        'main': (context) => const MainLayout(),
+        'doc_details': (context) => const DoctorDetails(),
+        'booking_page': (context) => const BookingPage(),
+        'success_booking': (context) => const AppointmentBooked(),
       },
     );
   }

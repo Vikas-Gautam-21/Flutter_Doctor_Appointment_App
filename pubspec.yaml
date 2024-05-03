@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   dynamic_fa_icons: ^1.1.0+2
   font_awesome_flutter: ^10.7.0
+  table_calendar: ^3.1.1
+  lottie: ^2.6.0
 
 dev_dependencies:
   flutter_test:
